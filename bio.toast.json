@@ -21,5 +21,12 @@
       "spotify": "https://spotify.com/",
       "email": "mailto:bio@toast.name"
     },
-    "customWidgets": []
+    "customWidgets": [
+      {
+        "id": "github-stats",
+        "type": "img",
+        "alt": "GitHub",
+        "src": "https://myreadme.vercel.app/api/embed/lightly-toasted?panels=userstatistics,commitgraph"
+      }
+    ]
   }
