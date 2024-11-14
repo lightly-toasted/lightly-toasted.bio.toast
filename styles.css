@@ -1,1 +1,165 @@
-body, html { background: lightblue } 
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/v4-font-face.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body, html { background: lightblue }
+h1, h2, h3, h4 { color: white }
+p { color: ghostwhite }
+#container {
+    padding: 1em;
+    background: slategray;
+    border-radius: 1em;
+}
+
+a:active {
+    color: lightpink
+}
+
+a:visited {
+    color: thistle
+}
+
+#github, #discord {
+    display: flex
+}
+
+#discord-title {
+    display: none
+}
+
+#github-username, #discord-username { color: gainsboro }
+
+#discord-profile-image {
+    border-radius: 1em;
+}
+
+@keyframes popStatusCircle {
+    from {
+        font-size: 0;
+    }
+    to {
+        font-size: 20px;
+    }
+}
+
+#discord-status { 
+    font-size: 20px;
+}
+
+#discord-status[data-status="online"] { color: palegreen }
+#discord-status[data-status="dnd"] { color: lightpink }
+#discord-status[data-status="idle"] { color: lemonchiffon }
+#discord-status[data-status="offline"] { color: gainsboro }
+
+#discord-status:before { 
+    content: "\25cf";
+    margin-right: 4px;
+    font-size: 0;
+    animation: popStatusCircle .5s forwards
+}
+
+#discord-link {
+    font-size: 0;
+    color: white;
+    text-decoration: none;
+    margin-top: 4px;
+}
+
+#discord-link:before {
+    font-family: FontAwesome;
+    font-size: 24px;
+    content: "\f392";
+}
+
+#name, #github-username, #discord-display, #discord-username {
+  margin: 0;
+}
+
+#github-profile-image {
+    background: floralwhite;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#discord-profile-image {
+    margin-right: 1em;
+}
+
+#social-links {
+    display: flex;
+    list-style-type: none;
+}
+
+#social-link {
+    font-size: 0;
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+}
+
+#social-link:before {
+    font-family: FontAwesome;
+    font-size: 36px;
+}
+
+#social-link[data-app="github"]:before { content: "\f09b" }
+#social-link[data-app="website"]:before { content: "\f0ac" }
+#social-link[data-app="youtube"]:before { content: "\f167" }
+#social-link[data-app="twitter"]:before { content: "\e61b" }
+#social-link[data-app="facebook"]:before { content: "\f09a" }
+#social-link[data-app="buymeacoffee"]:before { content: "\f4b9" }
+#social-link[data-app="twitch"]:before { content: "\f1e8" }
+#social-link[data-app="spotify"]:before { content: "\f1bc" }
+#social-link[data-app="email"]:before { content: "\40" }
+#social-link[data-app="instagram"]:before { content: "\f16d" }
+#social-link[data-app="tiktok"]:before { content: "\e07b" }
+#social-link[data-app="discord"]:before { content: "\f392" }
+#social-link[data-app="pinterest"]:before { content: "\f0d2" }
+#social-link[data-app="stackoverflow"]:before { content: "\f16c" }
+#social-link[data-app="reddit"]:before { content: "\f1a1" }
+#social-link[data-app="steam"]:before { content: "\f1b6" }
+#social-link[data-app="threads"]:before { content: "\e618" }
+#social-link[data-app="npm"]:before { content: "\f3d4" }
+#social-link[data-app="bilibili"]:before { content: "\e3d9" }
+#social-link[data-app="bitcoin"]:before { content: "\f379" }
+#social-link[data-app="ethereum"]:before { content: "\f42e" }
+#social-link[data-app="googleplay"]:before { content: "\f3ab" }
+
+#repos-list {
+    list-style-type: none;
+    max-height: 256px;
+    overflow-y: auto;
+}
+
+#repo {
+    color: white;
+    text-decoration: none;
+    
+}
+
+#repos-count {
+    color: white;
+    background: cornflowerblue;
+    width: 20px;
+    height: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    vertical-align: middle;
+    border-radius: 5em;
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+#social-link:before, #discord-link:before, #repo {
+    transition: text-shadow .2s ease-in-out
+}
+
+#social-link:hover:before, #discord-link:hover:before, #repo:hover {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
